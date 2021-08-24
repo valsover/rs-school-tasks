@@ -16,3 +16,60 @@ body .main {
   max-width: 1440px;
   margin: 0 auto;
 }
+
+.header {
+  width: 100%;
+  background-color: #000000;
+}
+.header .header__container {
+  padding: 75px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area {
+  width: 195px;
+  height: 50px;
+  text-align: right;
+  background: left no-repeat url(assets/svg/logo.svg);
+  transition: 0.2s ease-out;
+}
+.logo-area .logo-area__heading {
+  font: 28px "Forum", cursive;
+  line-height: 50%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.logo-area:hover {
+  filter: invert(57%) sepia(10%) saturate(1148%) hue-rotate(356deg) brightness(92%) contrast(89%);
+  color: #9d8665;
+}
+
+.nav-list {
+  display: flex;
+}
+.nav-list li {
+  list-style-type: none;
+}
+.nav-list a {
+  font: 22px "Roboto", sans-serif;
+  color: #ffffff;
+  font-weight: 100;
+  line-height: 50%;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+}
+.nav-list a:hover {
+  color: #9d8665;
+}
+
+.header__nav-list li {
+  margin-left: 76px;
+}
+.header__nav-list li:nth-child(1) {
+  margin-left: 0;
+}
