@@ -20,3 +20,73 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
+
+//HEADER BASIC
+.header {
+  width: 100%;
+
+  background-color: $black;
+
+  .header__container {
+    padding: 75px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+//HEADER LOGO
+.logo-area {
+  width: 195px;
+  height: 50px;
+
+  text-align: right;
+
+  background: left no-repeat url(assets/svg/logo.svg);
+
+  transition: 0.2s ease-out;
+
+    .logo-area__heading {
+    @include forum-font-28;
+  }
+
+  &:hover {
+    filter: invert(57%) sepia(10%) saturate(1148%) hue-rotate(356deg) brightness(92%) contrast(89%);
+    color: $font-gold;
+  }
+}
+
+//NAV BASIC
+.nav-list {
+  display: flex;
+
+  li {
+    list-style-type: none;
+  }
+  a {
+    @include roboto-font-22-white;
+    font-weight: 100;
+    line-height: 50%;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+
+    text-decoration: none;
+    
+    transition: 0.2s ease-out;
+  }
+  a:hover {
+    color: $font-gold;
+  }
+}
+
+//HEADER NAV
+.header__nav-list {
+  li {
+    margin-left: 76px;
+  }
+  li:nth-child(1) {
+    margin-left: 0;
+  }
+}
+  
