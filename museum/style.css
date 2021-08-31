@@ -1,15 +1,63 @@
+/* BASICS */
+:root {
+  --bg-dark: #151719;
+  --dark-red: #710707;
+  --font-gold: #9d8665;
+  --white: #ffffff;
+  --black: #000000;
+  --font-80: 80px;
+  --font-32: 32px;
+  --font-28: 28px;
+  --font-22: 22px;
+}
+
+.forum-font-80 {
+  font: var(--font-80) 'Forum', cursive;
+  line-height: 90%;
+  letter-spacing: 5px;
+}
+
+.forum-font-32 {
+  font: var(--font-32) 'Forum', cursive;
+  letter-spacing: 5px;
+  color: var(--black);
+}
+
+.forum-font-28 {
+  font: var(--font-28) 'Forum', cursive;
+  line-height: 50%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.roboto-font-28 {
+  font: var(--font-28) 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: var(--white);
+}
+
+.roboto-font-22-white {
+  font: var(--font-22) 'Roboto', sans-serif;
+  color: var(--white);
+}
+
+.roboto-font-22-black {
+  font: var(--font-22) 'Roboto', sans-serif;
+  color: var(--black);
+}
+
 *, *::after, *::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-body .main {
-  flex: 1;
 }
 
 .container {
@@ -17,74 +65,18 @@ body .main {
   margin: 0 auto;
 }
 
+
+/* HEADER */
 .header {
   width: 100%;
-  background-color: #000000;
+  background-color: var(--black);
 }
-.header .header__container {
+.header__container {
   padding: 75px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.footer {
-  width: 100%;
-  background-color: #000000;
-}
-.footer .footer__container {
-  padding: 75px 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo-area {
-  width: 195px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  text-align: right;
-  background: left no-repeat url(assets/svg/logo.svg);
-  transition: 0.2s ease-out;
-}
-.logo-area .logo-area__heading {
-  font: 28px "Forum", cursive;
-  line-height: 50%;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin: 0;
-}
-.logo-area:hover {
-  filter: invert(57%) sepia(10%) saturate(1148%) hue-rotate(356deg) brightness(92%) contrast(89%);
-  color: #9d8665;
-}
-
-.footer__logo-area {
-  align-self: flex-start;
-}
-
-.nav-list {
-  display: flex;
-}
-.nav-list li {
-  list-style-type: none;
-}
-.nav-list a {
-  font: 22px "Roboto", sans-serif;
-  color: #ffffff;
-  font-weight: 100;
-  line-height: 50%;
-  letter-spacing: 2px;
-  text-transform: capitalize;
-  text-decoration: none;
-  transition: 0.2s ease-out;
-}
-.nav-list a:hover {
-  color: #9d8665;
-}
-
 .header__nav-list li {
   margin-left: 76px;
 }
@@ -92,10 +84,22 @@ body .main {
   margin-left: 0;
 }
 
+/* FOOTER */
+.footer {
+  width: 100%;
+  background-color: var(--black);
+}
+.footer__container {
+  padding: 75px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__logo-area {
+  align-self: flex-start;
+}
 .footer__nav {
   margin-left: 100px;
 }
-
 .footer__nav-list {
   flex-flow: column wrap;
   align-content: space-between;
@@ -108,12 +112,10 @@ body .main {
   display: flex;
   align-items: center;
 }
-
 .footer__socials {
   align-self: flex-end;
   flex: 1;
 }
-
 .footer__socials-list {
   display: flex;
   justify-content: flex-end;
@@ -141,4 +143,45 @@ body .main {
 }
 .footer__socials-list li:hover {
   filter: invert(57%) sepia(10%) saturate(1148%) hue-rotate(356deg) brightness(92%) contrast(89%);
+}
+
+/* HEADER & FOOTER COMMON */
+.logo-area {
+  width: 195px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+  background: left no-repeat url(assets/svg/logo.svg);
+  transition: 0.2s ease-out;
+}
+.logo-area__heading {
+  margin: 0;
+}
+.logo-area:hover {
+  filter: invert(57%) sepia(10%) saturate(1148%) hue-rotate(356deg) brightness(92%) contrast(89%);
+  color: var(--font-gold);
+}
+.nav-list {
+  display: flex;
+}
+.nav-list li {
+  list-style-type: none;
+}
+.nav-list a {
+  font-weight: 100;
+  line-height: 50%;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+}
+.nav-list a:hover {
+  color: var(--font-gold);
+}
+
+/* MAIN */
+.main {
+  flex: 1;
 }
