@@ -47,3 +47,23 @@ for (let i = 0; i < cardsArr.length; i++) {
   class="cards__description roboto-font-22-black">360° Virtual Tour <br><span
   class="cards__description--small">Google Street Panorama View</span></p></a></div>`;
 }
+
+//Video control panel
+window.onload = function () {
+  player = document.getElementById("player");
+}
+
+//Playing video
+const largePlay = document.getElementById("largePlay");
+largePlay.addEventListener("click", fastPlay);
+let numOfClicks = 0;
+function fastPlay() {
+  ++numOfClicks;
+  if (numOfClicks % 2 !== 0) {
+    largePlay.style.backgroundImage = "none";
+    player.play();
+  } if (numOfClicks % 2 == 0) {
+    largePlay.style.backgroundImage = "url(assets/svg/large-play-btn.svg)";
+    player.pause();
+  }
+}
