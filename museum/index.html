@@ -57,7 +57,25 @@
         </div>
       </section>
       <section class="video" id="video">
-        <div class="video__container"></div>
+        <div class="video__container container">
+          <div class="player__wrapper">
+            <video class="player" id="player" src="assets/video/bienvenue-au-louvre.mp4" width="1440" height="629" poster="assets/img/video-poster.jpg"></video>
+            <button class="large-play no-outline" id="largePlay" type="button"></button>
+            <div class="control-panel">
+              <button class="back no-outline" id="back" type="button"></button>
+              <button class="small-play no-outline" id="smallPlay" type="button"></button>
+              <button class="forward no-outline" id="forward" type="button"></button>
+              <input class="progress" id="progress" type="range">
+              <div class="volume_container">
+                <button class="sound no-outline" id="sound" type="button"></button>
+                <input class="volume" id="volume" type="range">
+              </div>
+              <button class="fullscreen no-outline" id="fullscreen" type="button"></button>
+            </div>
+          </div>
+          <h2 class="video__heading forum-font-80">Video Journey</h2>
+          <p class="video__text roboto-font-22-black">Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code</p>
+        </div>
       </section>
       <section class="tickets" id="tickets">
         <div class="tickets__container"></div>
