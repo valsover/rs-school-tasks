@@ -78,7 +78,44 @@
         </div>
       </section>
       <section class="tickets" id="tickets">
-        <div class="tickets__container"></div>
+        <div class="tickets__container container">
+          <h2 class="tickets__heading forum-font-80 underline-title">Buy tickets</h2>
+          <div class="tickets__content">
+            <p class="img__wrapper"><img class="tickets__img img" src="assets/img/buy-tickets.jpg" alt="Pompeo Batoni's masterpies" title="Venus Presenting Aeneas With Armor Forged By Vulcan (When He Was Secretly Hoping for an PlayStation 4), 1748" ></p>
+            <section class="ticket-type">
+              <h3 class="ticket-type__heading roboto-font-28">Ticket Type</h3>
+              <label class="ticket-type__label roboto-font-22-white" for="permanent">Permanent exhibition
+                  <input type="radio" class="ticket-type__input" id="permanent" name="exhibition-type" value="permanent">
+                  <span class="checkmark"></span>
+              </label>
+              <label class="ticket-type__label roboto-font-22-white" for="temporary">Temporary exhibition
+                  <input type="radio" class="ticket-type__input" id="temporary" name="exhibition-type" value="temporary">
+                  <span class="checkmark"></span>
+              </label>
+              <label class="ticket-type__label roboto-font-22-white" for="combined">Combined Admission
+                  <input type="radio" class="ticket-type__input" id="combined" name="exhibition-type" value="combined">
+                  <span class="checkmark"></span>
+              </label>
+            </section>
+            <section class="ticket-amount">
+              <h3 class="ticket-amount__heading roboto-font-28">Amount</h3>
+              <label class="age__label roboto-font-22-white" for="basic">Basic 18+</label>
+              <div class="ticket-amount__container">
+                <button class="btn_minus no-outline" id="minusBasic">–</button>
+                <input type="number" class="ticket-amount__count no-outline" id="basic" step="1" min="1" max="20" name="age" value="basic" placeholder="1" readonly>
+                <button class="btn_plus no-outline" id="plusBasic">+</button>
+              </div>
+              <label class="age__label senior_age__label roboto-font-22-white" for="senior">Senior 65+</label>
+              <div class="ticket-amount__container">
+                <button class="btn_minus no-outline" id="minusSenior">–</button>
+                <input type="number" class="ticket-amount__count no-outline" id="senior" step="1" min="1" max="20" name="age" value="senior" placeholder="0" readonly>
+                <button class="btn_plus no-outline" id="plusSenior">+</button>
+              </div>
+              <p class="ticket-amount__total roboto-font-28">Total €<span id="totalAmount">220</span></p>
+            </section>
+            <button class="tickets__button_submit roboto-font-22-black no-outline" type="submit">Buy Now</button>
+          </div>
+        </div>
       </section>
       <section class="contacts" id="contacts">
         <div class="contacts__container"></div>
