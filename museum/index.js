@@ -81,48 +81,47 @@ let countS = 0;
 function plusOneBasic() {
   if (countB < 20) {
     countB++;
-    basicAmount.placeholder = countB;
+    basicAmount.value = countB;
     totalAmount.innerText = (totalAmountNum * countB).toString();
   }
   if (countB >= 20) {
     countB = 20;
-    basicAmount.placeholder = countB;
+    basicAmount.value = countB;
   }
 }
 function plusOneSenior() {
   if (countS < 20) {
     countS++;
-    seniorAmount.placeholder = countS;
+    seniorAmount.value = countS;
   }
   if (countS >= 20) {
     countS = 20;
-    seniorAmount.placeholder = countS;
+    seniorAmount.value = countS;
   }
 }
 function minusOneBasic() {
   if (countB <= 20) {
     countB--;
-    basicAmount.placeholder = countB;
+    basicAmount.value = countB;
     if (+totalAmount.innerText >= 220) {
       totalAmount.innerText = (totalAmount.innerText - totalAmountNum).toString();
     } else {
       totalAmount.innerText = "0";
     }
-    console.log(totalAmountNum)
   }
   if (countB < 1) {
     countB = 0;
-    basicAmount.placeholder = countB;
+    basicAmount.value = countB;
   }
 }
 function minusOneSenior() {
   if (countS <= 20) {
     countS--;
-    seniorAmount.placeholder = countS;
+    seniorAmount.value = countS;
   }
   if (countS < 1) {
     countS = 0;
-    seniorAmount.placeholder = countS;
+    seniorAmount.value = countS;
   }
 }
 
