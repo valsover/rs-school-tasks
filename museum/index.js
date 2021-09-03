@@ -67,3 +67,71 @@ function fastPlay() {
     player.pause();
   }
 }
+
+//Counting tickets amount
+const plusBasic = document.getElementById("plusBasic");
+const plusSenior = document.getElementById("plusSenior");
+const minusBasic = document.getElementById("minusBasic");
+const minusSenior = document.getElementById("minusSenior");
+const basicAmount = document.getElementById("basic");
+const seniorAmount = document.getElementById("senior");
+
+let countB = 1;
+let countS = 0;
+function plusOneBasic() {
+  if (countB < 20) {
+    countB++;
+    basicAmount.placeholder = countB;
+    totalAmount.innerText = (totalAmountNum * countB).toString();
+  }
+  if (countB >= 20) {
+    countB = 20;
+    basicAmount.placeholder = countB;
+  }
+}
+function plusOneSenior() {
+  if (countS < 20) {
+    countS++;
+    seniorAmount.placeholder = countS;
+  }
+  if (countS >= 20) {
+    countS = 20;
+    seniorAmount.placeholder = countS;
+  }
+}
+function minusOneBasic() {
+  if (countB <= 20) {
+    countB--;
+    basicAmount.placeholder = countB;
+    if (+totalAmount.innerText >= 220) {
+      totalAmount.innerText = (totalAmount.innerText - totalAmountNum).toString();
+    } else {
+      totalAmount.innerText = "0";
+    }
+    console.log(totalAmountNum)
+  }
+  if (countB < 1) {
+    countB = 0;
+    basicAmount.placeholder = countB;
+  }
+}
+function minusOneSenior() {
+  if (countS <= 20) {
+    countS--;
+    seniorAmount.placeholder = countS;
+  }
+  if (countS < 1) {
+    countS = 0;
+    seniorAmount.placeholder = countS;
+  }
+}
+
+plusBasic.addEventListener("click", plusOneBasic);
+plusSenior.addEventListener("click", plusOneSenior);
+
+minusBasic.addEventListener("click", minusOneBasic);
+minusSenior.addEventListener("click", minusOneSenior);
+
+//Counting total amount
+const totalAmount = document.getElementById("totalAmount");
+let totalAmountNum = +totalAmount.innerText;

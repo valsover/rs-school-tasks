@@ -453,3 +453,162 @@ body {
   cursor: pointer;
   filter: invert(57%) sepia(10%) saturate(1148%) hue-rotate(356deg) brightness(92%) contrast(89%) drop-shadow(0 0 10px var(--white));
 }
+
+/* TICKETS */
+.tickets {
+  width: 100%;
+  background-color: var(--bg-dark);
+}
+
+.tickets__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 103px;
+}
+
+.tickets__heading {
+  color: var(--white);
+}
+
+.tickets__content {
+  position: relative;
+  display: grid;
+  grid-template-columns: 54.2% auto auto;
+}
+
+.ticket-type,
+.ticket-amount {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket-type__heading,
+.ticket-amount__heading {
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+/* ------------------------ */
+.ticket-type {
+  align-items: flex-start;
+  row-gap: 48px;
+}
+
+.ticket-type__label {
+  position: relative;
+  padding-left: 40px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.ticket-type__label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkmark {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  display: block;
+  width: 17px;
+  height: 17px;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.ticket-type__input {
+  position: absolute;
+  opacity: 0;
+}
+
+.ticket-type__label input:checked ~ .checkmark {
+  background-color: var(--dark-red);
+}
+
+/* -------------------- */
+.ticket-amount {
+  align-items: flex-end;
+}
+
+.age__label {
+  margin-top: 10px;
+  padding-right: 56px;
+  font-weight: 300;
+}
+
+.senior_age__label {
+  padding-right: 47px;
+  margin-top: 35px;
+}
+
+.ticket-amount__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  margin-top: 13px;
+  padding: 0 11px;
+  border: 3px solid var(--white);
+}
+
+.btn_minus,
+.btn_plus {
+  font: 400 32px 'Roboto', sans-serif;
+  color: var(--white);
+  background: transparent;
+}
+
+.btn_minus:hover,
+.btn_plus:hover {
+  cursor: pointer;
+  opacity: 0.75;
+} 
+
+/* hiding count arrows from input type number */
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.ticket-amount__count {
+  width: 26px;
+  height: 26px;
+  color: var(--white);
+  background: transparent;
+}
+
+.ticket-amount__count::placeholder {
+  font: 300 22px 'Roboto', sans-serif;
+  text-align: center;
+  color: var(--white);
+}
+
+.ticket-amount__total {
+  margin-top: 48px;
+  font-weight: 700;
+  letter-spacing: 1.65px;
+  color: var(--white);
+}
+
+.tickets__button_submit {
+  position: absolute;
+  right: 0;
+  bottom: 112px;
+  width: 175px;
+  height: 50px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: 0.2s ease-out;
+}
+
+.tickets__button_submit:hover {
+  background: var(--font-gold);
+  cursor: pointer;
+}
